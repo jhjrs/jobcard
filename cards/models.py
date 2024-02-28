@@ -11,3 +11,7 @@ class JobCard(models.Model):
 
     def __str__(self):
         return self.user.username
+    
+class Photo(models.Model):
+    image = models.ImageField(upload_to='photos/')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)

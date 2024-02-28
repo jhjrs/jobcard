@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from .forms import JobCardForm, RegistrationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.models import User
+from .models import Photo
 
 def home(request):
     return render(request, 'cards/home.html')
@@ -43,3 +45,11 @@ def registration_view(request):
     else:
         form = RegistrationForm()
     return render(request, 'register.html', {'form': form})
+
+def display_users(request):
+    users = User.objects.all()
+    return render(request, 'cards/display_users.html', {'users': users})
+
+def display_photos(request):
+    photos = Photo.objects.all()
+    return render(request, 'cards/display_photos.html', {'photos': photos})
