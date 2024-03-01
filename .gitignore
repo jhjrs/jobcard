@@ -1,5 +1,5 @@
 __pycache__/
 db.sqlite3
-C:\Users\schne\IANenv\jobcard\cards\__pycache__
-C:\Users\schne\IANenv\jobcard\cards\migrations\__pycache__
-C:\Users\schne\IANenv\jobcard\jobcard\__pycache__
+jobcard\cards\__pycache__
+jobcard\cards\migrations\__pycache__
+jobcard\jobcard\__pycache__
